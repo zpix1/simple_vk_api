@@ -5,9 +5,8 @@ import json
 import threading
 import utils as u
 params = u.json_read('params.json')
-session = vk.AuthSession(params*)
+session = vk.AuthSession(app_id=params["app_id"], user_login=params["user_login"], user_password=params["user_password"], scope=params["scope"])
 api = vk.API(session)
-
 _symbs = [' ',' ']
 _no_spam_trigger = 0
 
